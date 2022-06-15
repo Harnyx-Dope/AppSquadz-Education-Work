@@ -1,0 +1,36 @@
+package AppsquaqzEx1.Numbers;
+
+import java.util.Scanner;
+//Recursive Approach Mine(Harsh Vardhan Gupta)
+public class HappyNumberRecursive
+{
+    static int count=1;
+    public static boolean isHappy(int n)
+    {
+        int sum=0;
+
+        if(count>11)
+            return false;
+
+        count++;
+        while(n!=0)
+        {
+            int rem=n%10;
+            sum=sum+rem*rem;
+            n=n/10;
+        }
+        if(sum==1)
+            return true;
+        else
+        {
+            return isHappy(sum);
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        var s=sc.nextInt();
+        System.out.println(isHappy(s));
+    }
+}
