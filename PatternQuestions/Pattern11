@@ -1,0 +1,20 @@
+package AppsquaqzEx1;
+
+import java.util.Scanner;
+
+public class Pattern1
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        {
+            var f = 1;
+            for (int i = 1; i <=5; i++) {
+                for (int j = 5; j >0; j--) {
+                        System.out.print(j);
+                }
+                System.out.println();
+            }
+        }//Local block
+    }
+}
