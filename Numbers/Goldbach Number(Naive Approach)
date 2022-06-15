@@ -1,0 +1,63 @@
+package AppsquaqzEx1.Numbers;
+
+import java.util.Scanner;
+//Harsh VArdhan Gupta(Gold Batch)
+public class Goldbach
+{
+    static int[] arr;
+    static int n;
+    static{
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        arr=new int[n/2];
+    }
+    public static boolean cont(int n)
+    {
+        var count=0;
+        for(int i=1;i<n;i++)
+        {
+
+            if(n%i==0)
+                count++;
+        }
+        if(count==1)
+            return true;
+        else  return false;
+    }
+    public static void primeno()
+    {
+        int index=0;
+        arr[index++]=2;
+        for (int i = 2; i < n; i++)
+        {
+            if( i%2!=0 && cont(i))
+            {
+                arr[index++]=i;
+            }
+
+        }
+
+    }
+    public static void main(String[] args)
+    {
+        primeno();
+        System.out.println("List of Pairs of GoldBach Numbers");
+        for(int i=0;i<arr.length-1;i++)
+        {
+            for(int j=i;j<arr.length-1;j++)
+            {
+                if(arr[i]==0)
+                    return;
+                int sum=arr[i]+arr[j];
+                if(sum ==n)
+                {
+                    System.out.println(arr[i]+ " , " + arr[j]);
+                }
+            }
+
+        }
+
+
+
+    }
+}
