@@ -1,0 +1,20 @@
+package AppsquaqzEx1.Numbers;
+
+import java.util.Scanner;
+
+public class AutomopharicNumber
+{
+    static  int n;
+    static
+    {
+        n=new Scanner(System.in).nextInt();
+    }
+    public static void main(String[] args)
+    {
+
+       if(Math.pow(n,2)%10==(n%10))
+           System.out.println("Automphoric Number");
+       else
+           System.out.println("Not An Automopharic Number");
+    }
+}
